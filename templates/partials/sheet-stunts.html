@@ -1,0 +1,32 @@
+<section class="stunts item-list">
+	<div class="header">
+		<h1>{{ localize "FATE.Sheet.Stunts" }}</h1>
+
+		{{#if owner}}
+		<div class="item-controls">
+			<a class="item-control item-create" title="Create Stunt" data-type="Stunt"><i class="fas fa-plus"></i>
+				Add</a>
+		</div>
+		{{/if}}
+	</div>
+
+	<ul class="item-list-content stunts-list">
+		{{#each stunts as |stunt k|}}
+		<li class="item stunt-list-item" data-item-id="{{stunt._id}}">
+			{{#if ../owner}}
+			<div class="item-name item-control item-edit">
+				<h4>{{stunt.name}}</h4>
+			</div>
+
+			<div class="item-controls">
+				<a class="item-control item-delete" title="Delete Stunt"><i class="fas fa-trash"></i></a>
+			</div>
+			{{else}}
+			<div class="item-name">
+				<h4>{{stunt.name}}</h4>
+			</div>
+			{{/if}}
+		</li>
+		{{/each}}
+	</ul>
+</section>

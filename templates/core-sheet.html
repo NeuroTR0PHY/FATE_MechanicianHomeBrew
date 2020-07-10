@@ -1,0 +1,117 @@
+<form class="{{cssClass}}" autocomplete="off">
+	<nav class="sheet-navigation tabs">
+		<a class="item" data-tab="sheet">{{ localize "FATE.Sheet.TabSheet" }}</a>
+		<a class="item" data-tab="biography">{{ localize "FATE.Sheet.TabBio" }}</a>
+	</nav>
+
+	<section class="sheet-body">
+		<!-- MAIN SHEET -->
+		<div class="tab main-sheet" data-tab="sheet">
+			<div class="sheet-group">
+				{{> systems/fate/templates/partials/sheet-id.html}}
+
+				{{> systems/fate/templates/partials/sheet-refresh.html}}
+
+				<img class="logo" src="systems/fate/assets/PbF_Light.svg">
+			</div>
+
+			<div class="sheet-group fill">
+				{{> systems/fate/templates/partials/sheet-aspects.html}}
+
+				{{> systems/fate/templates/partials/sheet-skills-grid.html}}
+			</div>
+
+			<div class="sheet-group fill">
+				{{> systems/fate/templates/partials/sheet-extras.html}}
+
+				{{> systems/fate/templates/partials/sheet-stunts.html}}
+			</div>
+
+			<div class="sheet-group">
+				<section class="stress">
+					<div class="stress-physical">
+						<h2 class="header">{{localize "FATE.Sheet.PhysStress"}}</h2>
+
+						<ul class="stress-boxes">
+							{{#each data.health.stress.physical as |check value|}}
+							<li class="stress-item">
+								<span class="stress-number">{{value}}</span>
+								<label class="stress-box">
+									<input type="checkbox" name="data.health.stress.physical.{{value}}"
+										data-stress="physical" data-value="{{value}}" data-dtype="Boolean" {{checked
+									check}} />
+									<i class="fas fa-check"></i>
+								</label>
+							</li>
+							{{/each}}
+						</ul>
+					</div>
+
+					<div class="stress-mental">
+						<h2 class="header">{{localize "FATE.Sheet.MentalStress"}}</h2>
+
+						<ul class="stress-boxes">
+							{{#each data.health.stress.mental as |check value|}}
+							<li class="stress-item">
+								<span class="stress-number">{{value}}</span>
+								<label class="stress-box">
+									<input type="checkbox" name="data.health.stress.mental.{{value}}"
+										data-stress="mental" data-value="{{value}}" data-dtype="Boolean" {{checked
+									check}} />
+									<i class="fas fa-check"></i>
+								</label>
+							</li>
+							{{/each}}
+						</ul>
+					</div>
+				</section>
+				<section class="consequences fill">
+					<h1 class="header">{{localize "FATE.Sheet.Cons.Label"}}</h1>
+					<ul class="consequences-list">
+						{{#each cons as |con k|}}
+						{{#if con.isMild}}
+						<li class="consequence mild">
+							<div class="consequence-value">{{con.stress}}</div>
+							<div class="property">
+								<label class="property-label">{{ localize con.label }}</label>
+								<div class="property-textarea" contenteditable="true"
+									data-edit="data.health.cons.{{k}}.one">
+									{{con.one}}
+								</div>
+							</div>
+
+							<div class="consequence-value {{#if con.twoEnabled}}{{else}}disabled{{/if}}">
+								{{con.stress}}</div>
+							<div class=" property {{#if con.twoEnabled}}{{else}}disabled{{/if}}">
+								<label class="property-label">{{ localize con.label }} ({{con.twoEnabled}})</label>
+								<div class="property-textarea"
+									contenteditable="{{#if con.twoEnabled}}true{{else}}false{{/if}}"
+									data-edit="data.health.cons.{{k}}.two">
+									{{con.two}}
+								</div>
+							</div>
+						</li>
+						{{else}}
+						<li class="consequence">
+							<div class="consequence-value">{{con.stress}}</div>
+							<div class="property">
+								<label class="property-label">{{ localize con.label }}</label>
+								<div class="property-textarea" contenteditable="true"
+									data-edit="data.health.cons.{{k}}.value">
+									{{con.value}}
+								</div>
+							</div>
+							{{/if}}
+						</li>
+						{{/each}}
+					</ul>
+				</section>
+			</div>
+		</div>
+
+		<!-- BIOGRAPHY -->
+		<div class="tab biography" data-tab="biography">
+			{{> systems/fate/templates/partials/sheet-biography.html}}
+		</div>
+	</section>
+</form>

@@ -1,0 +1,25 @@
+<section class="skills">
+	<h1 class="header">{{ localize "FATE.Sheet.Skills" }}</h1>
+
+	<div class="skills-list">
+		{{#each skills as |level k|}}
+		<div class="skills-rows">
+			<div class="skills-level">{{level.label}} ({{numberFormat level.value sign=true}})
+			</div>
+
+			<div class="skills-boxes" data-level="{{level.value}}">
+				{{#each level.filteredSkills as |skill i|}}
+				{{#if skill}}
+				<div class="skill-box skill-box__{{level.value}}{{i}} skill-edit" data-index="{{i}}"
+					data-item-id="{{skill._id}}">
+					<div class="skill-item" title="{{skill.name}}">{{skill.name}}</div>
+				</div>
+				{{else}}
+				<div class="skill-box skill-box__{{level.value}}{{i}}" data-index="{{i}}"></div>
+				{{/if}}
+				{{/each}}
+			</div>
+		</div>
+		{{/each}}
+	</div>
+</section>

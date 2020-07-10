@@ -1,0 +1,92 @@
+<form class="{{cssClass}}" autocomplete="off">
+	<nav class="sheet-navigation tabs">
+		<a class="item" data-tab="sheet">{{ localize "FATE.Sheet.TabSheet" }}</a>
+		<a class="item" data-tab="biography">{{ localize "FATE.Sheet.TabBio" }}</a>
+	</nav>
+
+	<div class="sheet-body">
+		<section class="tab main-sheet" data-tab="sheet">
+			<div class="sheet-group">
+				<div class="property name">
+					<label class="property-label">Name</label>
+					<input class="property-input" type="text" name="name" value="{{actor.name}}">
+				</div>
+
+				<img class="image" src="systems/fate/assets/PbF_Light.svg">
+			</div>
+
+			<div class="sheet-grid">
+				<section class="aspects">
+					<h1 class="header">{{ localize "FATE.Sheet.Aspects" }}</h1>
+					<div class="property-container">
+						<div class="property hc">
+							<label class="property-label">{{ localize "FATE.Sheet.HC" }}</label>
+							<div class="property-textarea" contenteditable="true" data-edit="data.aspects.hc">
+								{{{data.aspects.hc}}}</div>
+						</div>
+						<div class="property trouble">
+							<label class="property-label">{{ localize "FATE.Sheet.Trouble" }}</label>
+							<div class="property-textarea" contenteditable="true" data-edit="data.aspects.trouble">
+								{{{data.aspects.trouble}}}</div>
+						</div>
+						<div class="property relationship">
+							<label class="property-label">{{ localize "FATE.Sheet.Relationship" }}</label>
+							<div class="property-textarea" contenteditable="true" data-edit="data.aspects.relationship">
+								{{{data.aspects.relationship}}}</div>
+						</div>
+						<div class="property other1">
+							<label class="property-label">{{ localize "FATE.Sheet.OtherAspect" }}</label>
+							<div class="other-list">
+								<div class="property-textarea" contenteditable="true" data-edit="data.aspects.other1">
+									{{{data.aspects.other1}}}</div>
+							</div>
+						</div>
+						<div class="property other2">
+							<label class="property-label">{{ localize "FATE.Sheet.OtherAspect" }}</label>
+							<div class="other-list">
+								<div class="property-textarea" contenteditable="true" data-edit="data.aspects.other2">
+									{{{data.aspects.other2}}}</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section class="vitals">
+					<h1 class="header">{{ localize "FATE.Sheet.Vitals" }}</h1>
+
+					<div class="property-container">
+						<h2 class="small-header">{{ localize "FATE.Sheet.Stress" }}</h2>
+
+						<h2 class="small-header">{{ localize "FATE.Sheet.Cons.Label" }}</h2>
+					</div>
+				</section>
+
+				<div class="left-column">
+					{{> systems/fate/templates/partials/sheet-stunts.html}}
+
+					<section class="fate-points">
+						<h1 class="header">{{ localize "FATE.Sheet.Points" }}</h1>
+
+						<div class="content">
+							<div class="current-field">
+								<input class="current-input" type="text" name="data.details.points.current"
+									value="{{data.details.points.current}}" data-dtype="Number" title="Current">
+							</div>
+
+							<div class="refresh-field">
+								<input class="refresh-input" type="text" name="data.details.points.refresh"
+									value="{{data.details.points.refresh}}" data-dtype="Number" title="Refresh">
+							</div>
+						</div>
+					</section>
+				</div>
+
+				{{> systems/fate/templates/partials/sheet-skills-list.html}}
+			</div>
+		</section>
+
+		<section class="tab biograhy" data-tab="biography">
+			{{> systems/fate/templates/partials/sheet-biography.html}}
+		</section>
+	</div>
+</form>

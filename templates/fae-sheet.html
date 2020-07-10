@@ -1,0 +1,91 @@
+<form class="{{cssClass}}" autocomplete="off">
+	<nav class="sheet-navigation tabs">
+		<a class="item active" data-tab="sheet">{{ localize "FATE.Sheet.TabSheet" }}</a>
+		<a class="item" data-tab="biography">{{ localize "FATE.Sheet.TabBio" }}</a>
+	</nav>
+
+	<section class="sheet-body">
+		<div class="tab main-sheet" data-tab="sheet">
+			<div class="sheet-group">
+				{{> systems/fate/templates/partials/sheet-id.html}}
+
+				<div class="logo">
+					<img class="image" src="systems/fate/assets/PbF_Light.svg">
+
+					<hr class="logo-divider">
+
+					<span class="title">Accelerated</span>
+				</div>
+			</div>
+
+			<div class="sheet-group fill">
+				<div class="sheet-group vertical fill">
+					{{> systems/fate/templates/partials/sheet-aspects.html}}
+					{{> systems/fate/templates/partials/sheet-stunts.html}}
+				</div>
+
+				<div class="sheet-group vertical">
+					{{> systems/fate/templates/partials/sheet-refresh.html}}
+
+					<section class="approaches">
+						<h1 class="header">{{ localize "FATE.Sheet.Approaches.Label" }}</h1>
+						<ul class="approaches-list">
+							{{#each approaches as |approach k|}}
+							<li class="approach-item">
+								<label class="property-label">{{ localize approach.label }}</label>
+								<select class="property-select approach" name="data.approaches.{{k}}.value"
+									data-dtype="Number">
+									{{#select approach.value}}
+									{{#each ../fateLadder as |level k|}}
+									<option value="{{level.value}}">{{level.label}}
+										({{numberFormat level.value sign=true}})</option>
+									{{/each}}
+									{{/select}}
+								</select>
+							</li>
+							{{/each}}
+						</ul>
+					</section>
+				</div>
+			</div>
+
+			<div class="sheet-group">
+				<section class="stress">
+					<h1 class="header">{{ localize "FATE.Sheet.Stress" }}</h1>
+					<ul class="stress-boxes">
+						{{#each data.health.stress as |check value|}}
+						<li class="stress-item">
+							<span class="stress-number">{{value}}</span>
+							<label class="stress-box">
+								<input type="checkbox" name="data.health.stress.{{value}}" data-dtype="Boolean" {{checked
+									check}} />
+								<i class="fas fa-check"></i>
+							</label>
+						</li>
+						{{/each}}
+					</ul>
+				</section>
+
+				<section class="consequences fill">
+					<h1 class="header">{{ localize "FATE.Sheet.Cons.Label" }}</h1>
+					<ul class="consequences-list">
+						{{#each cons as |con k|}}
+						<li class="consequence">
+							<div class="consequence-value">{{con.stress}}</div>
+							<div class="property">
+								<label class="property-label">{{ localize con.label }}</label>
+								<div class="property-textarea" contenteditable="true"
+									data-edit="data.health.cons.{{k}}.value">
+									{{con.value}}
+								</div>
+							</div>
+						</li>
+						{{/each}}
+					</ul>
+				</section>
+			</div>
+		</div>
+
+		{{> systems/fate/templates/partials/sheet-biography.html}}
+	</section>
+</form>

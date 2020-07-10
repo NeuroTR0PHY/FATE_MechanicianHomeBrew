@@ -1,0 +1,13 @@
+<div class="data data-skill">
+	<label for="physical">{{ localize "FATE.Item.Physique"}}:</label>
+	<input type="checkbox" name="data.health.physical" id="physical" data-dtype="Boolean"
+		{{checked data.health.physical}}>
+
+	<label for="mental">{{ localize "FATE.Item.Will"}}:</label>
+	<input type="checkbox" name="data.health.mental" id="mental" data-dtype="Boolean" {{checked data.health.mental}}>
+
+	{{#if isCore}}
+	<label>{{ localize "FATE.Item.Level"}}:</label>
+	<span class="property level">{{level}}</span>
+	{{/if}}
+</div>

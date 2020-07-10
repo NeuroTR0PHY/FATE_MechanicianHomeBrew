@@ -1,0 +1,182 @@
+{
+	"Actor": {
+		"types": ["Core", "Accelerated", "Condensed"],
+		"templates": {
+			"common": {
+				"details": {
+					"description": {
+						"value": ""
+					},
+					"biography": {
+						"value": ""
+					},
+					"points": {
+						"current": 3,
+						"refresh": 3
+					}
+				},
+				"health": {
+					"cons": {
+						"mild": {},
+						"moderate": {
+							"value": ""
+						},
+						"severe": {
+							"value": ""
+						}
+					}
+				}
+			},
+			"commonAspects": {
+				"aspects": {
+					"hc": {
+						"value": ""
+					},
+					"trouble": {
+						"value": ""
+					},
+					"other": {
+						"value": ["", "", ""]
+					}
+				}
+			}
+		},
+		"Core": {
+			"templates": ["common", "commonAspects"],
+			"details": {
+				"extras": {
+					"value": ""
+				}
+			},
+			"health": {
+				"cons": {
+					"mild": {
+						"one": "",
+						"two": ""
+					}
+				},
+				"stress": {
+					"physical": {
+						"1": false,
+						"2": false,
+						"3": false,
+						"4": false
+					},
+					"mental": {
+						"1": false,
+						"2": false,
+						"3": false,
+						"4": false
+					}
+				}
+			}
+		},
+		"Accelerated": {
+			"templates": ["common", "commonAspects"],
+			"approaches": {
+				"careful": {
+					"value": 0
+				},
+				"clever": {
+					"value": 0
+				},
+				"flashy": {
+					"value": 0
+				},
+				"forceful": {
+					"value": 0
+				},
+				"quick": {
+					"value": 0
+				},
+				"sneaky": {
+					"value": 0
+				}
+			},
+			"health": {
+				"cons": {
+					"mild": {
+						"value": ""
+					}
+				},
+				"stress": {
+					"1": false,
+					"2": false,
+					"3": false
+				}
+			}
+		},
+		"Condensed": {
+			"details": {
+				"points": {
+					"current": 3,
+					"refresh": 3
+				}
+			},
+			"aspects": {
+				"hc": "",
+				"trouble": "",
+				"relationship": "",
+				"other1": "",
+				"other2": ""
+			},
+			"vitals": {
+				"stress": {
+					"physical": {
+						"max": 3,
+						"current": 0
+					},
+					"mental": {
+						"max": 3,
+						"current": 0
+					}
+				},
+				"cons": {
+					"mild": {
+						"one": "",
+						"two": ""
+					},
+					"moderate": {
+						"value": ""
+					},
+					"severe": {
+						"value": ""
+					}
+				}
+			}
+		}
+	},
+	"Item": {
+		"types": ["Stunt", "Skill", "Extra"],
+		"templates": {
+			"baseItem": {
+				"description": {
+					"value": ""
+				}
+			}
+		},
+		"Stunt": {
+			"templates": ["baseItem"]
+		},
+		"Skill": {
+			"templates": ["baseItem"],
+			"sheet": "",
+			"health": {
+				"physical": false,
+				"mental": false
+			},
+			"level": 0
+		},
+		"Extra": {
+			"templates": ["baseItem"],
+			"permissions": "",
+			"costs": "",
+			"actions": {
+				"overcome": "",
+				"create": "",
+				"attack": "",
+				"defend": ""
+			}
+		}
+	}
+}

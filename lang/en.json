@@ -1,0 +1,81 @@
+{
+	"FATE": {
+		"Sheet": {
+			"TabSheet": "Sheet",
+			"TabBio": "Biography",
+
+			"Description": "Description",
+			"Details": "Details",
+			"Artwork": "Artwork",
+			"Biography": "Biography",
+
+			"Points": "Points",
+			"FatePoints": "Fate Points",
+			"Refresh": "Refresh",
+			"Current": "Current",
+
+			"HC": "High Concept",
+			"Trouble": "Trouble",
+			"Aspects": "Aspects",
+			"Relationship": "Relationship",
+			"OtherAspect": "Other Aspect",
+
+			"Skills": "Skills",
+			"Extras": "Extras",
+			"Stunts": "Stunts",
+
+			"Stress": "Stress",
+			"PhysStress": "Physical Stress (Physique)",
+			"MentalStress": "Mental Stress (Will)",
+			"Vitals": "Vitals",
+
+			"Cons": {
+				"Label": "Consequences",
+				"Mild": "Mild",
+				"Moderate": "Moderate",
+				"Severe": "Severe",
+
+				"Physique": "P",
+				"Will": "W"
+			},
+
+			"Approaches": {
+				"Label": "Approaches",
+				"Careful": "Careful",
+				"Clever": "Clever",
+				"Flashy": "Flashy",
+				"Forceful": "Forceful",
+				"Quick": "Quick",
+				"Sneaky": "Sneaky"
+			}
+		},
+		"Item": {
+			"Physique": "Physique",
+			"Will": "Will",
+			"Level": "Skill Level",
+
+			"Permissions": "Permissions",
+			"Costs": "Costs",
+			"Actions": "Actions"
+		},
+		"Ladder": {
+			"Legendary": "Legendary",
+			"Epic": "Epic",
+			"Fantastic": "Fantastic",
+			"Superb": "Superb",
+			"Great": "Great",
+			"Good": "Good",
+			"Fair": "Fair",
+			"Average": "Average",
+			"Mediocre": "Mediocre",
+			"Poor": "Poor",
+			"Terrible": "Terrible"
+		},
+		"Actions": {
+			"overcome": "Overcome",
+			"create": "Create an Advantage",
+			"attack": "Attack",
+			"defend": "Defend"
+		}
+	}
+}
