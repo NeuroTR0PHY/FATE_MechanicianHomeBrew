@@ -18,7 +18,7 @@
 	"gridDistance": 1,
 	"gridUnits": "",
 	"minimumCoreVersion": "0.5.2",
-	"compatibleCoreVersion": "0.6.5",
+	"compatibleCoreVersion": "0.6.4",
 	"url": "https://gitlab.com/foundry-projects/fate",
 	"manifest": "https://gitlab.com/foundry-projects/fate/-/raw/master/src/system.json",
 	"download": "https://gitlab.com/foundry-projects/fate/-/raw/v0.3.1/package/fate-v0.3.1.zip"
