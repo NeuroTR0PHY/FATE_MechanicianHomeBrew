@@ -1,9 +1,9 @@
 {
 	"name": "FATE_Homebrew",
-	"title": "FATE_Homebrew",
-	"description": "An heavily tweaked implementation of FATE Condensed for a Homebrew Setting",
+	"title": "FATE_HB",
+	"description": "A heavily tweaked implementation of FATE Condensed for a Homebrew Setting",
 	"version": 0.1,
-	"author": "Nathan A. Baune (NeuroTrophy)",
+	"author": "Nathan Baune (NeuroTrophy)",
 	"scripts": [],
 	"esmodules": [ "fate.js" ],
 	"styles": [ "fate.css" ],
@@ -20,6 +20,6 @@
 	"minimumCoreVersion": "0.5.2",
 	"compatibleCoreVersion": "0.6.5",
 	"url": "https://github.com/NeuroTR0PHY/FATE_MechanicianHomeBrew",
-	"manifest": "https://github.com/NeuroTR0PHY/FATE_MechanicianHomeBrew/master/system.json",
-	"download": "https://github.com/NeuroTR0PHY/FATE_MechanicianHomeBrew/archive/0.0.1.zip"
+	"manifest": "https://github.com/NeuroTR0PHY/FATE_MechanicianHomeBrew/blob/master/system.json",
+	"download": "https://github.com/NeuroTR0PHY/FATE_MechanicianHomeBrew/archive/0.2.zip"
 }
