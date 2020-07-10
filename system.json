@@ -2,7 +2,7 @@
 	"name": "FATE_Homebrew",
 	"title": "FATE_Homebrew",
 	"description": "An heavily tweaked implementation of FATE Condensed for a Homebrew Setting",
-	"version": "0.1",
+	"version": 0.1,
 	"author": "Nathan A. Baune (NeuroTrophy)",
 	"scripts": [],
 	"esmodules": [ "fate.js" ],
