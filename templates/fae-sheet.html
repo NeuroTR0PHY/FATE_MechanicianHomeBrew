@@ -7,10 +7,10 @@
 	<section class="sheet-body">
 		<div class="tab main-sheet" data-tab="sheet">
 			<div class="sheet-group">
-				{{> systems/fate/templates/partials/sheet-id.html}}
+				{{> systems/FATE_MechanicianHomeBrew/templates/partials/sheet-id.html}}
 
 				<div class="logo">
-					<img class="image" src="systems/fate/assets/PbF_Light.svg">
+					<img class="image" src="systems/FATE_MechanicianHomeBrew/assets/PbF_Light.svg">
 
 					<hr class="logo-divider">
 
@@ -20,12 +20,12 @@
 
 			<div class="sheet-group fill">
 				<div class="sheet-group vertical fill">
-					{{> systems/fate/templates/partials/sheet-aspects.html}}
-					{{> systems/fate/templates/partials/sheet-stunts.html}}
+					{{> systems/FATE_MechanicianHomeBrew/templates/partials/sheet-aspects.html}}
+					{{> systems/FATE_MechanicianHomeBrew/templates/partials/sheet-stunts.html}}
 				</div>
 
 				<div class="sheet-group vertical">
-					{{> systems/fate/templates/partials/sheet-refresh.html}}
+					{{> systems/FATE_MechanicianHomeBrew/templates/partials/sheet-refresh.html}}
 
 					<section class="approaches">
 						<h1 class="header">{{ localize "FATE.Sheet.Approaches.Label" }}</h1>
@@ -34,11 +34,13 @@
 							<li class="approach-item">
 								<label class="property-label">{{ localize approach.label }}</label>
 								<select class="property-select approach" name="data.approaches.{{k}}.value"
-									data-dtype="Number">
+										data-dtype="Number">
 									{{#select approach.value}}
 									{{#each ../fateLadder as |level k|}}
-									<option value="{{level.value}}">{{level.label}}
-										({{numberFormat level.value sign=true}})</option>
+									<option value="{{level.value}}">
+										{{level.label}}
+										({{numberFormat level.value sign=true}})
+									</option>
 									{{/each}}
 									{{/select}}
 								</select>
@@ -57,8 +59,7 @@
 						<li class="stress-item">
 							<span class="stress-number">{{value}}</span>
 							<label class="stress-box">
-								<input type="checkbox" name="data.health.stress.{{value}}" data-dtype="Boolean" {{checked
-									check}} />
+								<input type="checkbox" name="data.health.stress.{{value}}" data-dtype="Boolean" {{checked check}} />
 								<i class="fas fa-check"></i>
 							</label>
 						</li>
@@ -75,7 +76,7 @@
 							<div class="property">
 								<label class="property-label">{{ localize con.label }}</label>
 								<div class="property-textarea" contenteditable="true"
-									data-edit="data.health.cons.{{k}}.value">
+									 data-edit="data.health.cons.{{k}}.value">
 									{{con.value}}
 								</div>
 							</div>
@@ -86,6 +87,6 @@
 			</div>
 		</div>
 
-		{{> systems/fate/templates/partials/sheet-biography.html}}
+		{{> systems/FATE_MechanicianHomeBrew/templates/partials/sheet-biography.html}}
 	</section>
 </form>

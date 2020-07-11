@@ -15,6 +15,6 @@ export class CondensedCharacterSheet extends ActorSheetFate {
         return options;
     }
     get template() {
-        return 'systems/fate/templates/condensed-sheet.html';
+        return 'systems/FATE_MechanicianHomeBrew/templates/condensed-sheet.html';
     }
 }

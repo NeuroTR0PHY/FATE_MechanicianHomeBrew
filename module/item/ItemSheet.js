@@ -17,13 +17,13 @@ export class ItemSheetFATE extends ItemSheet {
         return options;
     }
     get template() {
-        return 'systems/fate/templates/item-sheet.html';
+        return 'systems/FATE_MechanicianHomeBrew/templates/item-sheet.html';
     }
     getData() {
         const data = super.getData();
         data.type = this.item.type.toLowerCase();
         data.hasDetails = ['skill', 'extra'].includes(data.type);
-        data.dataTemplate = () => `systems/fate/templates/items/${data.type}-data.html`;
+        data.dataTemplate = () => `systems/FATE_MechanicianHomeBrew/templates/items/${data.type}-data.html`;
         data.isCore = data.data.sheet === 'Core';
         data.isCondensed = data.data.sheet === 'Condensed';
         if (data.type === 'skill')

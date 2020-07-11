@@ -12,7 +12,7 @@
 					<input class="property-input" type="text" name="name" value="{{actor.name}}">
 				</div>
 
-				<img class="image" src="systems/fate/assets/PbF_Light.svg">
+				<img class="image" src="systems/FATE_MechanicianHomeBrew/assets/PbF_Light.svg">
 			</div>
 
 			<div class="sheet-grid">
@@ -22,30 +22,35 @@
 						<div class="property hc">
 							<label class="property-label">{{ localize "FATE.Sheet.HC" }}</label>
 							<div class="property-textarea" contenteditable="true" data-edit="data.aspects.hc">
-								{{{data.aspects.hc}}}</div>
+								{{{data.aspects.hc}}}
+							</div>
 						</div>
 						<div class="property trouble">
 							<label class="property-label">{{ localize "FATE.Sheet.Trouble" }}</label>
 							<div class="property-textarea" contenteditable="true" data-edit="data.aspects.trouble">
-								{{{data.aspects.trouble}}}</div>
+								{{{data.aspects.trouble}}}
+							</div>
 						</div>
 						<div class="property relationship">
 							<label class="property-label">{{ localize "FATE.Sheet.Relationship" }}</label>
 							<div class="property-textarea" contenteditable="true" data-edit="data.aspects.relationship">
-								{{{data.aspects.relationship}}}</div>
+								{{{data.aspects.relationship}}}
+							</div>
 						</div>
 						<div class="property other1">
 							<label class="property-label">{{ localize "FATE.Sheet.OtherAspect" }}</label>
 							<div class="other-list">
 								<div class="property-textarea" contenteditable="true" data-edit="data.aspects.other1">
-									{{{data.aspects.other1}}}</div>
+									{{{data.aspects.other1}}}
+								</div>
 							</div>
 						</div>
 						<div class="property other2">
 							<label class="property-label">{{ localize "FATE.Sheet.OtherAspect" }}</label>
 							<div class="other-list">
 								<div class="property-textarea" contenteditable="true" data-edit="data.aspects.other2">
-									{{{data.aspects.other2}}}</div>
+									{{{data.aspects.other2}}}
+								</div>
 							</div>
 						</div>
 					</div>
@@ -62,7 +67,7 @@
 				</section>
 
 				<div class="left-column">
-					{{> systems/fate/templates/partials/sheet-stunts.html}}
+					{{> systems/FATE_MechanicianHomeBrew/templates/partials/sheet-stunts.html}}
 
 					<section class="fate-points">
 						<h1 class="header">{{ localize "FATE.Sheet.Points" }}</h1>
@@ -70,23 +75,23 @@
 						<div class="content">
 							<div class="current-field">
 								<input class="current-input" type="text" name="data.details.points.current"
-									value="{{data.details.points.current}}" data-dtype="Number" title="Current">
+									   value="{{data.details.points.current}}" data-dtype="Number" title="Current">
 							</div>
 
 							<div class="refresh-field">
 								<input class="refresh-input" type="text" name="data.details.points.refresh"
-									value="{{data.details.points.refresh}}" data-dtype="Number" title="Refresh">
+									   value="{{data.details.points.refresh}}" data-dtype="Number" title="Refresh">
 							</div>
 						</div>
 					</section>
 				</div>
 
-				{{> systems/fate/templates/partials/sheet-skills-list.html}}
+				{{> systems/FATE_MechanicianHomeBrew/templates/partials/sheet-skills-list.html}}
 			</div>
 		</section>
 
 		<section class="tab biograhy" data-tab="biography">
-			{{> systems/fate/templates/partials/sheet-biography.html}}
+			{{> systems/FATE_MechanicianHomeBrew/templates/partials/sheet-biography.html}}
 		</section>
 	</div>
 </form>

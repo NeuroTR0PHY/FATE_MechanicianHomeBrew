@@ -16,7 +16,7 @@ export class FAECharacterSheet extends ActorSheetFate {
         return options;
     }
     get template() {
-        return 'systems/fate/templates/fae-sheet.html';
+        return 'systems/FATE_MechanicianHomeBrew/templates/fae-sheet.html';
     }
     getData() {
         const sheetData = super.getData();

@@ -5,17 +5,17 @@
 export const preloadHandlebarsTemplates = async function () {
     const templatePaths = [
         // Sheet partials
-        'systems/fate/templates/partials/sheet-id.html',
-        'systems/fate/templates/partials/sheet-aspects.html',
-        'systems/fate/templates/partials/sheet-biography.html',
-        'systems/fate/templates/partials/sheet-stunts.html',
-        'systems/fate/templates/partials/sheet-refresh.html',
-        'systems/fate/templates/partials/sheet-skills-grid.html',
-        'systems/fate/templates/partials/sheet-skills-list.html',
-        'systems/fate/templates/partials/sheet-extras.html',
+        'systems/FATE_MechanicianHomeBrew/templates/partials/sheet-id.html',
+        'systems/FATE_MechanicianHomeBrew/templates/partials/sheet-aspects.html',
+        'systems/FATE_MechanicianHomeBrew/templates/partials/sheet-biography.html',
+        'systems/FATE_MechanicianHomeBrew/templates/partials/sheet-stunts.html',
+        'systems/FATE_MechanicianHomeBrew/templates/partials/sheet-refresh.html',
+        'systems/FATE_MechanicianHomeBrew/templates/partials/sheet-skills-grid.html',
+        'systems/FATE_MechanicianHomeBrew/templates/partials/sheet-skills-list.html',
+        'systems/FATE_MechanicianHomeBrew/templates/partials/sheet-extras.html',
         // Item partials
-        'systems/fate/templates/items/skill-data.html',
-        'systems/fate/templates/items/extra-data.html',
+        'systems/FATE_MechanicianHomeBrew/templates/items/skill-data.html',
+        'systems/FATE_MechanicianHomeBrew/templates/items/extra-data.html',
     ];
     // Load the template partials
     return loadTemplates(templatePaths);

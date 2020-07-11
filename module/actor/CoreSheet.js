@@ -20,7 +20,7 @@ export class CoreCharacterSheet extends ActorSheetFate {
         return options;
     }
     get template() {
-        return 'systems/fate/templates/core-sheet.html';
+        return 'systems/FATE_MechanicianHomeBrew/templates/core-sheet.html';
     }
     getData() {
         const sheetData = super.getData();
